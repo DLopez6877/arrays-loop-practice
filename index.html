@@ -11,8 +11,8 @@
 
     <div class="container">
       <h1 class="jumbotron">Fun with forms and loops</h1>
-      <section> <!-- grocery list -->
-        <div>
+      <div class="row">
+        <div class="col-sm-8"> <!-- start of grocery list -->
           <form id="groceryForm">
             <h1>What groceries do you need from the store?</h1>
             <div class="form-group">
@@ -40,7 +40,7 @@
               <input id="grocery6" class="form-control" type="text">
             </div>
 
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" class="btn-success">Submit</button>
           </form>
           <div class="initially-hidden grocery-list">
             <h1>These are the groceries you need:</h1>
@@ -49,19 +49,25 @@
 
             </ol>
           </div>
-        </div>
-      </section> <!--end of grocery list -->
-      <section> <!-- word play -->
-
-      </section> <!-- end of word play -->
-      <section> <!-- deck of cards -->
-        <div>
-          <h3>Click <span class="cards-here">here</span> to see a deck of cards.</h3>
+        </div> <!-- end of grocery list -->
+        <div class="col-sm-4"> <!-- deck of cards -->
+          <h3>Click <span class="cards-here">here</span> to <span class="see-hide">see</span> a deck of cards.</h3>
           <ul id="deck" class="initially-hidden">
 
           </ul>
-        </div>
-      </section> <!-- end of deck of cards -->
+        </div> <!-- end of deck of cards -->
+      </div> <!--end of row -->
+      <div class="row">
+        <div class="col-sm-8"> <!-- word play -->
+          <form id="wordForm">
+            <div class="form-group">
+              <label>Enter a block of text</label>
+              <textarea id="sent" type="text" class="form-control" rows="5"></textarea>
+            </div>
+            <button id="wordBtn" type="submit" class="btn-info">Submit</button>
+          </form>
+        </div> <!-- end of word play -->
+      </div>
     </div>
 
   </body>

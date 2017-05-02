@@ -20,9 +20,10 @@ $(function() {
 
     newArray.forEach(function(grocerySorted){
       $("#grocery-list").append('<li>' + grocerySorted.toUpperCase() + '</li>');
-      $("#groceryForm").hide();
-      $(".grocery-list").show();
     });
+
+    $("#groceryForm").hide();
+    $(".grocery-list").show();
 
     event.preventDefault();
   });
@@ -44,6 +45,12 @@ $(function() {
     completedCards.forEach(function(completedCard) {
       $("#deck").append("<li>" + completedCard + "</li>");
     });
+    
+    if ($(".see-hide").text("see")){
+      $(".see-hide").text("hide");
+    } else {
+      $(".see-hide").text("see");
+    }
 
     $("#deck").toggle();
   });
