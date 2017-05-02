@@ -9,7 +9,6 @@ $(function() {
 
     groceries.forEach(function(grocery){
       var groceryInput = $("input#" + grocery).val();
-      console.log(groceryInput);
       if (groceryInput === "") {
         groceryInput = "(Blank)";
       }
@@ -45,7 +44,7 @@ $(function() {
     completedCards.forEach(function(completedCard) {
       $("#deck").append("<li>" + completedCard + "</li>");
     });
-    
+
     if ($(".see-hide").text("see")){
       $(".see-hide").text("hide");
     } else {
@@ -53,6 +52,38 @@ $(function() {
     }
 
     $("#deck").toggle();
+
+    event.preventDefault();
   });
 
+  // split text and return words with value of how many times they appear for Word Play
+  $("#word-btn").click(function() {
+    var sent = $("#sent").val();
+    var lowerSent = sent.toLowerCase();
+    var splitSent = lowerSent.split(" ");
+    var result = [];
+
+    splitSent.sort();
+
+
+    // for (index = 0; index < splitSent.length; index + 1) {
+    //   var counter = 0;
+    //   for (var i = 0; i < splitSent.length; i + 1) {
+    //     if (splitSent[index] === splitSent[i]) {
+    //       counter + 1;
+    //     }
+    //   }
+    //   if ((result[result.length - 1]) !== ("'" + splitSent[index] + "'" + " repeats " + counter + " times")) {
+    //     result.push("'" + splitSent[index] + "'" + " repeats " + counter + " times");
+    //   }
+    // };
+    result.forEach(function(line) {
+      $(".word-result").append("<li>" + line + "</li>");
+    });
+
+    $("#word-form").hide();
+    $("#word-result").show();
+
+    event.preventDefault();
+  });
 });

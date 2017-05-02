@@ -59,13 +59,18 @@
       </div> <!--end of row -->
       <div class="row">
         <div class="col-sm-8"> <!-- word play -->
-          <form id="wordForm">
+          <form id="word-form">
             <div class="form-group">
               <label>Enter a block of text</label>
               <textarea id="sent" type="text" class="form-control" rows="5"></textarea>
             </div>
-            <button id="wordBtn" type="submit" class="btn-info">Submit</button>
+            <button id="word-btn" type="submit" class="btn-info">Submit</button>
           </form>
+          <div id="word-result" class="initially-hidden">
+            <h4>List of words and how many times they appear:</h4>
+            <ul class="word-result">
+
+            </ul>
         </div> <!-- end of word play -->
       </div>
     </div>
