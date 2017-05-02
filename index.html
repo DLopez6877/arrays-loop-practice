@@ -10,44 +10,58 @@
   <body>
 
     <div class="container">
-      <div>
-        <form id="groceryForm">
-          <h1>What groceries do you need from the store?</h1>
-          <div class="form-group">
-            <label for="grocery1">A grocery</label>
-            <input id="grocery1" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="grocery2">Another grocery</label>
-            <input id="grocery2" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="grocery3">Another grocery</label>
-            <input id="grocery3" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="grocery4">Another grocery</label>
-            <input id="grocery4" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="grocery5">Another grocery</label>
-            <input id="grocery5" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="grocery6">Another grocery</label>
-            <input id="grocery6" class="form-control" type="text">
-          </div>
-
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
+      <h1 class="jumbotron">Fun with forms and loops</h1>
+      <section> <!-- grocery list -->
         <div>
-          <h1>These are the groceries you need:</h1>
-          <ol id="grocery-list"  class="initially-hidden">
+          <form id="groceryForm">
+            <h1>What groceries do you need from the store?</h1>
+            <div class="form-group">
+              <label for="grocery1">A grocery</label>
+              <input id="grocery1" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label for="grocery2">Another grocery</label>
+              <input id="grocery2" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label for="grocery3">Another grocery</label>
+              <input id="grocery3" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label for="grocery4">Another grocery</label>
+              <input id="grocery4" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label for="grocery5">Another grocery</label>
+              <input id="grocery5" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label for="grocery6">Another grocery</label>
+              <input id="grocery6" class="form-control" type="text">
+            </div>
+
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form>
+          <div class="initially-hidden grocery-list">
+            <h1>These are the groceries you need:</h1>
+            <ol id="grocery-list">
 
 
-          </ol>
+            </ol>
+          </div>
         </div>
-      </div>
+      </section> <!--end of grocery list -->
+      <section> <!-- word play -->
+
+      </section> <!-- end of word play -->
+      <section> <!-- deck of cards -->
+        <div>
+          <h3>Click <span class="cards-here">here</span> to see a deck of cards.</h3>
+          <ul id="deck" class="initially-hidden">
+
+          </ul>
+        </div>
+      </section> <!-- end of deck of cards -->
     </div>
 
   </body>

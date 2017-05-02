@@ -1,3 +1,8 @@
 .initially-hidden {
   display: none;
 }
+
+.cards-here {
+  color: blue;
+  text-decoration: underline;
+}
